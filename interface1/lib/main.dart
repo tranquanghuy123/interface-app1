@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       width: widthScreen,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(40)),
-          color: Colors.grey
+          color: Colors.white38
       ),
       child: Stack(
         children: [
@@ -102,9 +102,10 @@ class MyApp extends StatelessWidget {
             child: Container(
               width: 350,
               height: 360,
+
               decoration: BoxDecoration(
-                  color: Colors.lightGreenAccent,
-                  borderRadius: BorderRadius.all(Radius.circular(20))
+                  color: Colors.pink.shade100,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: Column(
                 children: [
@@ -113,7 +114,7 @@ class MyApp extends StatelessWidget {
                     height: 45,
                     width: 350,
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 3)
+                        //border: Border.all(color: Colors.black, width: 3)
 
                     ),
                     child: Column(
@@ -219,18 +220,13 @@ class MyApp extends StatelessWidget {
                         border: Border.all(color: Colors.white, width: 3),
                         borderRadius: BorderRadius.all(Radius.circular(50))
                     ),
-                    child: Row(
-                      children: [
-
-                        Text('Continue with Google',
-                          style: TextStyle(
-                              color: Colors.grey, fontSize: 12, fontFamily: 'Visby Round'
-                          ),
-                        ),
-                      ],
+                    child: Text('Continue with Google',
+                      style: TextStyle(
+                          color: Colors.grey, fontSize: 12, fontFamily: 'Visby Round'
+                      ),
                     ),
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(left: 15) ,
+                    padding: EdgeInsets.only(left: 15),
                   ),
                   Container(
                     height: 35,
@@ -251,9 +247,9 @@ class MyApp extends StatelessWidget {
                   ),
 
                 ],
-              ),
-            ),
-          ),
+              )
+            ,
+          )),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -261,8 +257,9 @@ class MyApp extends StatelessWidget {
               width: widthScreen,
               height: 90,
               decoration: BoxDecoration(
-                  color: Colors.pinkAccent,
-                  borderRadius: BorderRadius.all(Radius.circular(40))
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                //border: Border(top: BorderSide(color: Colors.white30, width: 3))
               ),
               child: Column(
                 children: [
@@ -271,9 +268,9 @@ class MyApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Icon(Icons.home,
-                        color: Colors.blue, size: 45,),
-                      Icon(Icons.work, color: Colors.blue, size: 45,),
-                      Icon(Icons.menu, color: Colors.blue, size: 45,)
+                        color: Colors.blueGrey, size: 45,),
+                      Icon(Icons.work, color: Colors.blueGrey, size: 45,),
+                      Icon(Icons.menu, color: Colors.blueGrey, size: 45,)
                     ],
                   )
                 ],
