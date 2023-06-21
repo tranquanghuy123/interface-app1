@@ -104,7 +104,7 @@ class MyApp extends StatelessWidget {
               height: 360,
 
               decoration: BoxDecoration(
-                  color: Colors.pink.shade100,
+                  color: Colors.pink.shade100.withOpacity(0.3),
                   borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: Column(
@@ -179,10 +179,11 @@ class MyApp extends StatelessWidget {
                   Container(
                     height: 30,
                     width: 100,
+                    //padding: EdgeInsets.fromLTRB(20, 10, 15, 10),
                     margin: EdgeInsets.fromLTRB(15,15,15,5),
                     decoration: BoxDecoration(
-                        color: Colors.blueAccent,
-                        border: Border.all(color: Colors.blueAccent, width: 3),
+                        color: Colors.blue[300],
+                        //border: Border.all(color: Colors.blueAccent, width: 3),
                         borderRadius: BorderRadius.all(Radius.circular(50))
                     ),
                     child: Text('Continue',
@@ -190,8 +191,8 @@ class MyApp extends StatelessWidget {
                           color: Colors.white, fontSize: 12, fontFamily: 'Visby Round'
                       ),
                     ),
-                    alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.only(left: 20) ,
+                    alignment: Alignment.center,
+                    //padding: EdgeInsets.only(left: 20) ,
                   ),
                   Container(
                     height: 30,
@@ -220,11 +221,20 @@ class MyApp extends StatelessWidget {
                         border: Border.all(color: Colors.white, width: 3),
                         borderRadius: BorderRadius.all(Radius.circular(50))
                     ),
-                    child: Text('Continue with Google',
-                      style: TextStyle(
-                          color: Colors.grey, fontSize: 12, fontFamily: 'Visby Round'
-                      ),
-                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+
+                        Image(image: AssetImage('lib/icons/google.png'),),
+                        Text('   Continue with Google',
+                          style: TextStyle(
+                              color: Colors.grey, fontSize: 12, fontFamily: 'Visby Round'
+                          ),
+                        ),
+
+                      ],
+                    ) ,
+
                     alignment: Alignment.center,
                     padding: EdgeInsets.only(left: 15),
                   ),
@@ -233,15 +243,23 @@ class MyApp extends StatelessWidget {
                     width: 300,
                     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(color: Colors.white, width: 3),
+                        color: Colors.blue[300],
+                        //border: Border.all(color: Colors.blue, width: 3),
                         borderRadius: BorderRadius.all(Radius.circular(50))
                     ),
-                    child: Text('Continue with Facebook',
-                      style: TextStyle(
-                          color: Colors.grey, fontSize: 12, fontFamily: 'Visby Round'
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                            image: AssetImage('lib/icons/facebook2.png')),
+                          Text('   Continue with Facebook',
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 12, fontFamily: 'Visby Round'
+                          ),
+                        ),
+                      ],
                     ),
+
                     alignment: Alignment.center,
                     padding: EdgeInsets.only(left: 15),
                   ),
@@ -268,9 +286,9 @@ class MyApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Icon(Icons.home,
-                        color: Colors.blueGrey, size: 45,),
-                      Icon(Icons.work, color: Colors.blueGrey, size: 45,),
-                      Icon(Icons.menu, color: Colors.blueGrey, size: 45,)
+                        color: Colors.blueGrey, size: 35,),
+                      Icon(Icons.work, color: Colors.blueGrey, size: 35,),
+                      Icon(Icons.menu, color: Colors.blueGrey, size: 35,)
                     ],
                   )
                 ],
